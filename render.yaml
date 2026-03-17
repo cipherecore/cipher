@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: cipherecore-web
+    runtime: static
+    buildCommand: echo "Building static site..."
+    staticPublishPath: ./
+    envVars:
+      - key: SITE_URL
+        value: https://cipherecore-web.onrender.com
+        scope: run_time
+      - key: NODE_ENV
+        value: production
+        scope: run_time
+    domains:
+      - https://cipherecore.com
+    headers:
+      - path: "/*"
+        headers:
+          - key: X-Content-Type-Options
+            value: nosniff
+          - key: X-Frame-Options
+            value: DENY
+          - key: X-XSS-Protection
+            value: "1; mode=block"
+          - key: Referrer-Policy
+            value: strict-origin-when-cross-origin
+          - key: Permissions-Policy
+            value: "geolocation=(), microphone=(), camera=()"
+          - key: Strict-Transport-Security
+            value: "max-age=31536000; includeSubDomains"
+          - key: Cache-Control
+            value: "public, max-age=3600"
+    routes:
+      - path: /downloads
+        dest: /downloads.html
+      - path: /download
+        dest: /download.html
