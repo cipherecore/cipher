@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — CiphereCore Security Platform</title>
+  <meta name="description" content="Frequently asked questions about CiphereCore. Learn about encryption, chat features, security, and more.">
+  <link rel="icon" type="image/x-icon" href="ciphercore_icon.ico">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .faq-item {
+      background: rgba(15,23,42,.4);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--sp-4);
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: var(--sp-6);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.3s ease;
+      font-weight: 600;
+    }
+    .faq-question:hover {
+      background: rgba(15,23,42,.6);
+    }
+    .faq-answer {
+      padding: 0 var(--sp-6) var(--sp-6);
+      color: var(--text-secondary);
+      line-height: 1.6;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-answer.open {
+      max-height: 500px;
+      padding: var(--sp-6);
+      padding-top: 0;
+    }
+    .faq-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-cyan);
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+    .faq-icon.open {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><span class="logo-text">Ciphe<span>reCore</span></span></a>
+      <nav class="nav-desktop"><a href="index.html">Home</a><a href="features.html">Features</a><a href="download.html">Download</a><a href="docs.html">Docs</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+      <div class="nav-cta">
+        <a href="download.html" class="btn btn-primary btn-sm"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav-mobile" id="nav-mobile"><a href="index.html">Home</a><a href="features.html">Features</a><a href="download.html">Download</a><a href="docs.html">Docs</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>FAQ</span></div>
+      <h1 class="heading-xl fade-up">Frequently Asked <span class="text-gradient">Questions</span></h1>
+      <p class="fade-up fade-up-delay-1">Find answers to common questions about CiphereCore features, security, and usage.</p>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section">
+    <div class="container" style="max-width:700px">
+      <h2 class="heading-md fade-up" style="margin-bottom:var(--sp-8)">Getting Started</h2>
+      
+      <div class="faq-item fade-up">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Is CiphereCore really free?</span>
+          <div class="faq-icon">▼</div>
+        </div>
+        <div class="faq-answer">
+          Yes, CiphereCore is 100% free. No subscription fees, no"freemium" catches, and no account required to download or use it. We believe security should be accessible to everyone.
+        </div>
+      </div>
+
+      <div class="faq-item fade-up fade-up-delay-1">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What operating systems are supported?</span>
+          <div class="faq-icon">▼</div>
+        </div>
+        <div class="faq-answer">
+          CiphereCore currently supports Windows (7 and later). We're actively working on Linux and macOS versions. Stay tuned for announcements.
+        </div>
+      </div>
+
+      <div class="faq-item fade-up fade-up-delay-2">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Do I need Python to run CiphereCore?</span>
+          <div class="faq-icon">▼</div>
+        </div>
+        <div class="faq-answer">
+          No. CiphereCore is distributed as a standalone Windows installer (.exe) with all dependencies bundled. Simply download and run—Python is not required.
+        </div>
+      </div>
+
+      <div class="faq-item fade-up fade-up-delay-3">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>How much storage does CiphereCore require?</span>
+          <div class="faq-icon">▼</div>
+        </div>
+        <div class="faq-answer">
+          The installer is approximately 32MB (cipherecore_installer.exe), portable is 30MB (cipherecore.exe), and ZIP archive is 82MB. After installation, CiphereCore uses minimal disk space (~50MB including user data, logs, and local database).
+        </div>
+      </div>
+
+      <h2 class="heading-md fade-up" style="margin:var(--sp-12) 0 var(--sp-8)">Encryption & Security</h2>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Which encryption algorithms does CiphereCore use?</span>
+          <div class="faq-icon">▼</div>
+        </div>
+        <div class="faq-answer">
+          CiphereCore supports military-grade algorithms: AES-256 (recommended), Fernet, ChaCha20, Triple DES, and AES-CTR. AES-256 uses industry standard CBC mode with PKCS7 padding and random initialization vectors.
+        </div>
+      </div>
+
+      <div class="faq-item fade-up fade-up-delay-1">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Is my data safe? How secure is the encryption?</span>
+          <div class="faq-icon">▼</div>
+        </div>
+        <div class="faq-answer">
+          Yes. CiphereCore uses battle-tested, open-source cryptography libraries. The encryption algorithms are NIST-approved and have undergone extensive peer review. We don't use proprietary encryption—what you see is what you get.
+        </div>
+      </div>
+
+      <div class="faq-item fade-up fade-up-delay-2">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What is the Shield Scan feature?</span>
+          <div class="faq-icon">▼</div>
+        </div>
+        <div class="faq-answer">
+          Shield Scan is an automated malware detection system for steganographic operations. It scans images for embedded PHP/JS code,  header corruption, and injection attacks before processing. This protects you from hidden threats in supposedly innocent image files.
+        </div>
+      </div>
+
+      <div class="faq-item fade-up fade-up-delay-3">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Can I decrypt files if I forget my password?</span>
+          <div class="faq-icon">▼</div>
+        </div>
+        <div class="faq-answer">
+          No. This is intentional for security. CiphereCore has no "master key" or recovery method—your password IS the key. If you forget it, the encrypted data remains inaccessible. Store your passwords securely using the Password Generator.
+        </div>
+      </div>
+
+      <h2 class="heading-md fade-up" style="margin:var(--sp-12) 0 var(--sp-8)">Chat & Messaging</h2>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>How does the encrypted chat work?</span>
+          <div class="faq-icon">▼</div>
+        </div>
+        <div class="faq-answer">
+          CiphereCore offers three chat modes: Server Chat (connect to a community server), Global Chat (broadcast messages via MongoDB), and Private Messages (direct 1-on-1 encrypted messaging). All messages between users are end-to-end encrypted.
+        </div>
+      </div>
+
+      <div class="faq-item fade-up fade-up-delay-1">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Do I need MongoDB to use CiphereCore?</span>
+          <div class="faq-icon">▼</div>
+        </div>
+        <div class="faq-answer">
+          MongoDB is optional. CiphereCore works fully offline using local SQLite storage. However, for Global Chat, Private Messages, and Friend System features, MongoDB enables cloud persistence and syncing across devices.
+        </div>
+      </div>
+
+      <div class="faq-item fade-up fade-up-delay-2">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Can I host my own CiphereCore server?</span>
+          <div class="faq-icon">▼</div>
+        </div>
+        <div class="faq-answer">
+          Yes! CiphereCore includes a built-in server mode. Navigate to Chat → Server, set a port and optional password, then "Start Server". Share your IP and port with others to connect. Perfect for private team communication.
+        </div>
+      </div>
+
+      <h2 class="heading-md fade-up" style="margin:var(--sp-12) 0 var(--sp-8)">Privacy & Data</h2>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Does CiphereCore collect data about me?</span>
+          <div class="faq-icon">▼</div>
+        </div>
+        <div class="faq-answer">
+          No data collection whatsoever. CiphereCore runs locally on your machine. We don't have analytics, telemetry, or tracking. Your encrypted files, messages, and user data never leave your device unless you explicitly configure MongoDB sync.
+        </div>
+      </div>
+
+      <div class="faq-item fade-up fade-up-delay-1">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>How are passwords stored?</span>
+          <div class="faq-icon">▼</div>
+        </div>
+        <div class="faq-answer">
+          User passwords are hashed using bcrypt with 12 rounds of salt—a modern, computationally expensive algorithm resistant to brute-force attacks. Even if someone obtained the database, they couldn't recover the original passwords.
+        </div>
+      </div>
+
+      <div class="faq-item fade-up fade-up-delay-2">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Is the source code available?</span>
+          <div class="faq-icon">▼</div>
+        </div>
+        <div class="faq-answer">
+          CiphereCore's cryptographic core uses open-source libraries verified by the security community. The application logic is proprietary for now, but we're committed to progressive transparency as the project grows.
+        </div>
+      </div>
+
+      <h2 class="heading-md fade-up" style="margin:var(--sp-12) 0 var(--sp-8)">Files & Steganography</h2>
+
+      <div class="faq-item fade-up">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What file types can I encrypt?</span>
+          <div class="faq-icon">▼</div>
+        </div>
+        <div class="faq-answer">
+          All file types are supported: documents, images, videos, archives, executables—anything. You can encrypt files up to 500MB. Encrypted files are saved with a .enc extension.
+        </div>
+      </div>
+
+      <div class="faq-item fade-up fade-up-delay-1">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>How does image steganography work?</span>
+          <div class="faq-icon">▼</div>
+        </div>
+        <div class="faq-answer">
+          Steganography hides text messages inside image files (PNG, JPG, BMP) without visibly altering the image. The recipient needs CiphereCore and the extraction password to reveal the hidden message. Perfect for covert communication.
+        </div>
+      </div>
+
+      <div class="faq-item fade-up fade-up-delay-2">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Can steganography be detected?</span>
+          <div class="faq-icon">▼</div>
+        </div>
+        <div class="faq-answer">
+          High-quality steganography with proper techniques is nearly impossible to detect without extraction. CiphereCore uses advanced algorithms to embed data while maintaining image integrity, making detection extremely difficult.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="section" style="background:rgba(168,85,247,0.05)">
+    <div class="container" style="text-align:center">
+      <h2 class="heading-lg fade-up">Still have <span class="text-gradient">questions?</span></h2>
+      <p class="body-lg fade-up fade-up-delay-1" style="margin-bottom:var(--sp-8);color:var(--text-secondary)">Reach out to our support team. We're here to help.</p>
+      <a href="contact.html" class="btn btn-primary fade-up fade-up-delay-2">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><span class="logo-text">Ciphe<span>reCore</span></span></a>
+          <p>A powerful multi-purpose security platform built for privacy.</p>
+        </div>
+        <div class="footer-col"><h4>Product</h4><ul><li><a href="features.html">Features</a></li><li><a href="download.html">Download</a></li><li><a href="docs.html">Docs</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li></ul></div>
+        <div class="footer-col"><h4>Support</h4><ul><li><a href="docs.html">Getting Started</a></li><li><a href="mailto:cipherecore@gmail.com">Email</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CiphereCore. All rights reserved.</span>
+        <div class="footer-bottom-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function toggleFaq(element) {
+      const answer = element.nextElementSibling;
+      const icon = element.querySelector('.faq-icon');
+      answer.classList.toggle('open');
+      icon.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — CiphereCore Security Platform</title>
+  <meta name="description" content="Security tips, encryption guides, and CiphereCore updates from our blog. Learn best practices for protecting your digital privacy.">
+  <link rel="icon" type="image/x-icon" href="ciphercore_icon.ico">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .blog-card {
+      background: rgba(15,23,42,.4);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,212,255,0.1);
+      border-color: var(--accent-cyan);
+    }
+    .blog-header {
+      height: 200px;
+      background: linear-gradient(135deg, rgba(0,212,255,0.1), rgba(52,152,219,0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .blog-content {
+      padding: var(--sp-6);
+    }
+    .blog-meta {
+      display: flex;
+      gap: var(--sp-4);
+      align-items: center;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: var(--sp-4);
+      flex-wrap: wrap;
+    }
+    .blog-tag {
+      display: inline-block;
+      padding: 2px 8px;
+      background: rgba(0,212,255,0.1);
+      color: var(--accent-cyan);
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><span class="logo-text">Ciphe<span>reCore</span></span></a>
+      <nav class="nav-desktop"><a href="index.html">Home</a><a href="features.html">Features</a><a href="download.html">Download</a><a href="docs.html">Docs</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+      <div class="nav-cta">
+        <a href="download.html" class="btn btn-primary btn-sm"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="nav-mobile" id="nav-mobile"><a href="index.html">Home</a><a href="features.html">Features</a><a href="download.html">Download</a><a href="docs.html">Docs</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Blog</span></div>
+      <h1 class="heading-xl fade-up">Security Blog</h1>
+      <p class="fade-up fade-up-delay-1">Tips, guides, and insights from the CiphereCore security team.</p>
+    </div>
+  </section>
+
+  <!-- BLOG POSTS SECTION -->
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:var(--sp-8)">
+        <!-- Blog Post 1 -->
+        <div class="blog-card fade-up">
+          <div class="blog-header">🔐</div>
+          <div class="blog-content">
+            <h3 class="heading-sm" style="margin-bottom:var(--sp-2)">The Complete Guide to AES-256 Encryption</h3>
+            <div class="blog-meta">
+              <span>March 15, 2026</span>
+              <span class="blog-tag">Encryption</span>
+            </div>
+            <p class="body-sm" style="color:var(--text-secondary);margin-bottom:var(--sp-4)">Understanding AES-256 encryption, why it's military-grade secure, and how CiphereCore implements it for optimal file protection.</p>
+            <a href="#" style="color:var(--accent-cyan);font-weight:600;text-decoration:none">Read Article →</a>
+          </div>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="blog-card fade-up fade-up-delay-1">
+          <div class="blog-header">🛡️</div>
+          <div class="blog-content">
+            <h3 class="heading-sm" style="margin-bottom:var(--sp-2)">Steganography: Hiding in Plain Sight</h3>
+            <div class="blog-meta">
+              <span>March 12, 2026</span>
+              <span class="blog-tag">Security</span>
+            </div>
+            <p class="body-sm" style="color:var(--text-secondary);margin-bottom:var(--sp-4)">What is steganography? How does image steganography work? And why you should care about hidden data threats with Shield Scan.</p>
+            <a href="#" style="color:var(--accent-cyan);font-weight:600;text-decoration:none">Read Article →</a>
+          </div>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="blog-card fade-up fade-up-delay-2">
+          <div class="blog-header">🔑</div>
+          <div class="blog-content">
+            <h3 class="heading-sm" style="margin-bottom:var(--sp-2)">Why Your Passwords Are Too Weak (And How to Fix It)</h3>
+            <div class="blog-meta">
+              <span>March 10, 2026</span>
+              <span class="blog-tag">Best Practices</span>
+            </div>
+            <p class="body-sm" style="color:var(--text-secondary);margin-bottom:var(--sp-4)">Learn the science behind password strength. We analyze millions of breached passwords and show you how to create uncrackable passwords.</p>
+            <a href="#" style="color:var(--accent-cyan);font-weight:600;text-decoration:none">Read Article →</a>
+          </div>
+        </div>
+
+        <!-- Blog Post 4 -->
+        <div class="blog-card fade-up fade-up-delay-3">
+          <div class="blog-header">💬</div>
+          <div class="blog-content">
+            <h3 class="heading-sm" style="margin-bottom:var(--sp-2)">End-to-End Encryption: What It Really Means</h3>
+            <div class="blog-meta">
+              <span>March 8, 2026</span>
+              <span class="blog-tag">Education</span>
+            </div>
+            <p class="body-sm" style="color:var(--text-secondary);margin-bottom:var(--sp-4)">Demystifying end-to-end encryption. How CiphereCore's chat system keeps your conversations private from servers, hackers, and governments.</p>
+            <a href="#" style="color:var(--accent-cyan);font-weight:600;text-decoration:none">Read Article →</a>
+          </div>
+        </div>
+
+        <!-- Blog Post 5 -->
+        <div class="blog-card fade-up fade-up-delay-1">
+          <div class="blog-header">⚙️</div>
+          <div class="blog-content">
+            <h3 class="heading-sm" style="margin-bottom:var(--sp-2)">CiphereCore v3.0.0: What's New</h3>
+            <div class="blog-meta">
+              <span>March 7, 2026</span>
+              <span class="blog-tag">Release</span>
+            </div>
+            <p class="body-sm" style="color:var(--text-secondary);margin-bottom:var(--sp-4)">Explore the major features of v3.0.0: real-time system monitoring, enhanced steganography, and our new Shield Scan threat detection system.</p>
+            <a href="download.html" style="color:var(--accent-cyan);font-weight:600;text-decoration:none">Check Release Notes →</a>
+          </div>
+        </div>
+
+        <!-- Blog Post 6 -->
+        <div class="blog-card fade-up fade-up-delay-2">
+          <div class="blog-header">🔍</div>
+          <div class="blog-content">
+            <h3 class="heading-sm" style="margin-bottom:var(--sp-2)">How to Detect Hidden Malware in Images</h3>
+            <div class="blog-meta">
+              <span>March 5, 2026</span>
+              <span class="blog-tag">Security</span>
+            </div>
+            <p class="body-sm" style="color:var(--text-secondary);margin-bottom:var(--sp-4)">The anatomy of image-based attacks. Why images are perfect vectors for malware delivery and how Shield Scan protects you.</p>
+            <a href="#" style="color:var(--accent-cyan);font-weight:600;text-decoration:none">Read Article →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER CTA -->
+  <section class="section" style="background:rgba(0,212,255,0.05)">
+    <div class="container" style="text-align:center;max-width:500px">
+      <h2 class="heading-lg fade-up">Stay Updated</h2>
+      <p class="body-md fade-up fade-up-delay-1" style="margin-bottom:var(--sp-6);color:var(--text-secondary)">New security articles posted every week. Subscribe to stay ahead of threats.</p>
+      <div style="display:flex;gap:var(--sp-2);margin-bottom:var(--sp-8)" class="fade-up fade-up-delay-2">
+        <input type="email" placeholder="your@email.com" style="flex:1;padding:var(--sp-3);background:rgba(15,23,42,.6);border:1px solid var(--border-color);border-radius:var(--radius-md);color:#fff;font-size:0.925rem" />
+        <button style="padding:var(--sp-3) var(--sp-5);background:var(--accent-cyan);color:#000;border:none;border-radius:var(--radius-md);font-weight:600;cursor:pointer;transition:all 0.3s ease" onmouseover="this.style.background='var(--accent-green)'" onmouseout="this.style.background='var(--accent-cyan)'">Subscribe</button>
+      </div>
+      <p class="body-sm" style="color:var(--text-muted)">No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><span class="logo-text">Ciphe<span>reCore</span></span></a>
+          <p>A powerful multi-purpose security platform built for privacy.</p>
+        </div>
+        <div class="footer-col"><h4>Product</h4><ul><li><a href="features.html">Features</a></li><li><a href="download.html">Download</a></li><li><a href="docs.html">Docs</a></li></ul></div>
+        <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li></ul></div>
+        <div class="footer-col"><h4>Support</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="mailto:cipherecore@gmail.com">Email</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 CiphereCore. All rights reserved.</span>
+        <div class="footer-bottom-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
