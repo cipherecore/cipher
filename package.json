@@ -1,0 +1,17 @@
+{
+  "name": "cipherecore-web",
+  "version": "3.0.0",
+  "description": "CiphereCore Official Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "cipherecore",
+    "encryption",
+    "privacy"
+  ],
+  "author": "CiphereCore Developer",
+  "license": "ISC"
+}
